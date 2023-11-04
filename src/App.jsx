@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Input from "./assets/components/Input";
-import Weather from "./assets/components/Weather";
 import { useLocalStorageState } from "./hooks/useLocalStorageState";
+import Input from "./components/Input";
+import Weather from "./components/Weather";
 
 function convertToFlag(countryCode) {
   const codePoints = countryCode
@@ -16,10 +16,6 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [displayLocation, setDisplayLocation] = useState("");
   const [weather, setWeather] = useState({});
-
-  function handleSetLocation(e) {
-    setLocation(e.target.value);
-  }
 
   useEffect(() => {
     const fetchWeather = async () => {
@@ -62,7 +58,7 @@ export default function App() {
   return (
     <div className="app">
       <h1>Comfy Weather</h1>
-      <Input location={location} onChangeLocation={handleSetLocation} />
+      <Input location={location} handleLocation={setLocation} />
 
       {isLoading && <p className="loader">Loading...</p>}
 
