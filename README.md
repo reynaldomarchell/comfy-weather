@@ -1,8 +1,36 @@
-# React + Vite
+# Comfy Weather
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Information
 
-Currently, two official plugins are available:
+Weather app to check the weather forecast for today and the next 6 days. This app fetch the Geocoding API from https://open-meteo.com/.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Stack used in this app
+
+- React
+- Vite
+
+## Installation
+
+1. Clone this repository
+
+```bash
+  git https://github.com/reynaldomarchell/comfy-weather.git
+```
+
+2.  Go to the project directory
+
+```bash
+  cd comfy-weather
+```
+
+3. Install the dependencies
+
+```bash
+  npm install
+```
+
+4. Start the app
+
+```bash
+  npm run dev
+```
