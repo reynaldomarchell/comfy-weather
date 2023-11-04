@@ -11,7 +11,9 @@ function convertToFlag(countryCode) {
 }
 
 export default function App() {
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState(
+    () => localStorage.getItem("location") || ""
+  );
   const [isLoading, setIsLoading] = useState(false);
   const [displayLocation, setDisplayLocation] = useState("");
   const [weather, setWeather] = useState({});
@@ -55,6 +57,7 @@ export default function App() {
     };
 
     fetchWeather();
+    localStorage.setItem("location", location);
   }, [location]);
 
   return (
